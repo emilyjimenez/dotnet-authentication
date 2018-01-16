@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"]="Log In";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using BasicAuth.ViewModels
+@model LoginVIewModel
+
+<h2>Log in or something something</h2>
+<hr />
+@using(Html.Beginform())
+{
+    @Html.LabelFor(m => m.Email)
+    @Html.TextBoxFor(m => m.Email)
+
+    @Html.LabelFor(m=>m.Password)
+    @Html.PasswordFor(m => m.Password)
+
+    <input type="submit" value="Log in" class="btn btn-default"/>
+}
